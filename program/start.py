@@ -53,7 +53,7 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f""" Salam {message.from_user.mention()}! **Snactus ⚡️ sizi salamlayır.**\n
+        f""" Salam {message.from_user.mention()}! **Hoks 🌬️ sizi salamlayır.**\n
 Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izləyə bilərsiz.
 
 
@@ -69,16 +69,16 @@ Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izl�
                 ],
                 [
                     InlineKeyboardButton(
-                        "🧔🏻 Sahibim",
+                        "👨🏻‍💻 Creator",
                         url=f"https://t.me/ValiyevAli",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "✅ Dəstək qrupu", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "🌬️ Söhbət Gurup", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "📣 Rəsmi kanal", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🎧 Music kanal", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
 
@@ -100,8 +100,8 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("✅ Rəsmi Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                            InlineKeyboardButton("❤️ Dəstək qrupu", url=f"https://t.me/{GROUP_SUPPORT}")
+                            InlineKeyboardButton("🎧 Music Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                            InlineKeyboardButton("🌬️ Söhbət Gurup", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
                             InlineKeyboardButton("👤 Asistan", url=f"https://t.me/{ass_uname}")
