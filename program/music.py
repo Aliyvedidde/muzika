@@ -118,7 +118,7 @@ async def play(c: Client, m: Message):
                 )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("⚡")
+            suhu = await replied.reply("📥 **audio yüklənnir...**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -135,7 +135,7 @@ async def play(c: Client, m: Message):
                 pos = add_to_queue(chat_id, songname, dl, link, "Audio", 0)
                 await suhu.delete()
                 await m.reply_photo(
-                    photo=f"{IMG_1}",
+                    photo=f"{IMG_2}",
                     caption=f"💡 **Musiqi sıraya əlavə olundu »** `{pos}`\n\n🏷 **Ad:** [{songname}]({link})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {m.from_user.mention()} tərəfindən.",
                     reply_markup=keyboard,
                 )
@@ -166,7 +166,7 @@ async def play(c: Client, m: Message):
                     "» xəta"
                 )
             else:
-                suhu = await c.send_message(chat_id, "⚡")
+                suhu = await c.send_message(chat_id, "❄️ **Axtarılır...**")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -185,13 +185,13 @@ async def play(c: Client, m: Message):
                             await suhu.delete()
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
-                                photo=f"{IMG_1}",
+                                photo=f"{IMG_2}",
                                 caption=f"💡 **Musiqi sıraya alındı »** `{pos}`\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən.",
                                 reply_markup=keyboard,
                             )
                         else:
                             try:
-                                await suhu.edit("Gözləyin")
+                                await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -217,7 +217,7 @@ async def play(c: Client, m: Message):
                 "»Zəhmət olmasa **musiqi faylı** və ya **musiqi adı yazın.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "Gözləyin")
+            suhu = await c.send_message(chat_id, "❄️ **Axtarılır...**")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -236,13 +236,13 @@ async def play(c: Client, m: Message):
                             f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                         )
                         await m.reply_photo(
-                            photo=f"{IMG_1}",
+                            photo=f"{IMG_2}",
                             caption=f"💡 Musiqi sıraya alındı `{pos}`\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən...",
                             reply_markup=keyboard,
                         )
                     else:
                         try:
-                            await suhu.edit("Gözləyin")
+                            await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -272,7 +272,7 @@ async def stream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="🤓 Menyu", callback_data="cbmenu"),
+                InlineKeyboardButton(text="❄️ Menyu", callback_data="cbmenu"),
                 InlineKeyboardButton(text="🎄 Bağla", callback_data="cls"),
             ]
         ]
@@ -354,7 +354,7 @@ async def stream(c: Client, m: Message):
                 await suhu.delete()
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
-                    photo=f"{IMG_1}",
+                    photo=f"{IMG_2}",
                     caption=f"💡 **Musiqi sıraya əlavə olundu »** `{pos}`\n\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən...",
                     reply_markup=keyboard,
                 )
