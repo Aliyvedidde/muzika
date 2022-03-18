@@ -118,7 +118,7 @@ async def play(c: Client, m: Message):
                 )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("📥 **audio yüklənnir...**")
+            suhu = await replied.reply("⚡")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -166,7 +166,7 @@ async def play(c: Client, m: Message):
                     "» xəta"
                 )
             else:
-                suhu = await c.send_message(chat_id, "❄️ **Axtarılır...**")
+                suhu = await c.send_message(chat_id, "⚡")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -191,7 +191,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                                await suhu.edit("⚡")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -217,7 +217,7 @@ async def play(c: Client, m: Message):
                 "»Zəhmət olmasa **musiqi faylı** və ya **musiqi adı yazın.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "❄️ **Axtarılır...**")
+            suhu = await c.send_message(chat_id, "⚡")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -242,7 +242,7 @@ async def play(c: Client, m: Message):
                         )
                     else:
                         try:
-                            await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                            await suhu.edit("⚡")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -272,7 +272,7 @@ async def stream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="❄️ Menyu", callback_data="cbmenu"),
+                InlineKeyboardButton(text="🤓 Menyu", callback_data="cbmenu"),
                 InlineKeyboardButton(text="🎄 Bağla", callback_data="cls"),
             ]
         ]
