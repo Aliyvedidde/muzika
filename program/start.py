@@ -54,7 +54,7 @@ async def _human_time_duration(seconds):
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f""" Salam {message.from_user.mention()}! **Hoks 🌬️ sizi salamlayır.**\n
-Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izləyə bilərsiz.
+**Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izləyə bilərsiz**
 
 
  **Botun komandaları haqqında bilgi almaq üçün Komandalar butonuna basın!**
@@ -70,7 +70,7 @@ Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izl�
                 [
                     InlineKeyboardButton(
                         "👨🏻‍💻 Creator",
-                        url=f"https://t.me/ValiyevAli",
+                        url=f"https://t.me/A_I_i_y_e_v_d_i",
                     )
                 ],
                 [
