@@ -191,7 +191,7 @@ async def play(c: Client, m: Message):
                             )
                         else:
                             try:
-                                await suhu.edit("⚡")
+                                await suhu.edit("Gözləyin")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -217,7 +217,7 @@ async def play(c: Client, m: Message):
                 "»Zəhmət olmasa **musiqi faylı** və ya **musiqi adı yazın.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "⚡")
+            suhu = await c.send_message(chat_id, "Gözləyin")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -242,7 +242,7 @@ async def play(c: Client, m: Message):
                         )
                     else:
                         try:
-                            await suhu.edit("⚡")
+                            await suhu.edit("Gözləyin")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
