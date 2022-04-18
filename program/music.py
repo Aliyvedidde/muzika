@@ -57,8 +57,8 @@ async def play(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="❄️ Menyu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="🎄 Bağla", callback_data="cls"),
+                InlineKeyboardButton(text="📂 Menyu", callback_data="cbmenu"),
+                InlineKeyboardButton(text="✖️ Bağla", callback_data="cls"),
             ]
         ]
     )
@@ -118,7 +118,7 @@ async def play(c: Client, m: Message):
                 )
     if replied:
         if replied.audio or replied.voice:
-            suhu = await replied.reply("📥 **audio yüklənnir...**")
+            suhu = await replied.reply("⚡**")
             dl = await replied.download()
             link = replied.link
             if replied.audio:
@@ -141,7 +141,7 @@ async def play(c: Client, m: Message):
                 )
             else:
              try:
-                await suhu.edit("☃️ **Asistan səsli söhbətə qoşulur...**")
+                await suhu.edit("🚹 **Asistan səsli söhbətə qoşulur...**")
                 await call_py.join_group_call(
                     chat_id,
                     AudioPiped(
@@ -154,7 +154,7 @@ async def play(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Musiqi başladı.**\n\n🏷 **Ad:** [{songname}]({link})\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `Hal hazırda səsli söhbətdə dinlənilir`\n🎧  {requester} tərəfindən.",
+                    caption=f"🎶 **Musiqi başladı.**\n\n🏷 **Ad:** [{songname}]({link})\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `Hal hazırda səsli söhbətdə dinlənilir`\n🎧  {requester} tərəfindən.",
                     reply_markup=keyboard,
                 )
              except Exception as e:
@@ -166,7 +166,7 @@ async def play(c: Client, m: Message):
                     "» xəta"
                 )
             else:
-                suhu = await c.send_message(chat_id, "❄️ **Axtarılır...**")
+                suhu = await c.send_message(chat_id, "⚡")
                 query = m.text.split(None, 1)[1]
                 search = ytsearch(query)
                 if search == 0:
@@ -186,12 +186,12 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_1}",
-                                caption=f"💡 **Musiqi sıraya alındı »** `{pos}`\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən.",
+                                caption=f"🎶 **Musiqi sıraya alındı »** `{pos}`\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən.",
                                 reply_markup=keyboard,
                             )
                         else:
                             try:
-                                await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                                await suhu.edit("🚹 **Asistan səsli söhbətə qoşulur...**")
                                 await call_py.join_group_call(
                                     chat_id,
                                     AudioPiped(
@@ -204,7 +204,7 @@ async def play(c: Client, m: Message):
                                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                                 await m.reply_photo(
                                     photo=f"{IMG_1}",
-                                    caption=f"💡 **Musiqi səsli söhbətdə başladı.**\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `dinlənilir`\n🎧 {requester} tərəfindən.",
+                                    caption=f"🎶 **Musiqi səsli söhbətdə başladı.**\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `dinlənilir`\n🎧 {requester} tərəfindən.",
                                     reply_markup=keyboard,
                                 )
                             except Exception as ep:
@@ -217,7 +217,7 @@ async def play(c: Client, m: Message):
                 "»Zəhmət olmasa **musiqi faylı** və ya **musiqi adı yazın.**"
             )
         else:
-            suhu = await c.send_message(chat_id, "❄️ **Axtarılır...**")
+            suhu = await c.send_message(chat_id, "⚡")
             query = m.text.split(None, 1)[1]
             search = ytsearch(query)
             if search == 0:
@@ -237,12 +237,12 @@ async def play(c: Client, m: Message):
                         )
                         await m.reply_photo(
                             photo=f"{IMG_1}",
-                            caption=f"💡 Musiqi sıraya alındı `{pos}`\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən...",
+                            caption=f"🎶 Musiqi sıraya alındı `{pos}`\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən...",
                             reply_markup=keyboard,
                         )
                     else:
                         try:
-                            await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                            await suhu.edit("🚹 **Asistan səsli söhbətə qoşulur...**")
                             await call_py.join_group_call(
                                 chat_id,
                                 AudioPiped(
@@ -255,7 +255,7 @@ async def play(c: Client, m: Message):
                             requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                             await m.reply_photo(
                                 photo=f"{IMG_1}",
-                                caption=f"💡 **Musiqi səsli söhbətdə ifa olunur..**\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `dinlənilir`\n🎧 {requester} tərəfindən...",
+                                caption=f"🎶 **Musiqi səsli söhbətdə ifa olunur..**\n\n🏷 **Ad:** [{songname}]({url})\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `dinlənilir`\n🎧 {requester} tərəfindən...",
                                 reply_markup=keyboard,
                             )
                         except Exception as ep:
@@ -272,8 +272,8 @@ async def stream(c: Client, m: Message):
     keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton(text="❄️ Menyu", callback_data="cbmenu"),
-                InlineKeyboardButton(text="🎄 Bağla", callback_data="cls"),
+                InlineKeyboardButton(text="📂 Menyu", callback_data="cbmenu"),
+                InlineKeyboardButton(text="✖️ Bağla", callback_data="cls"),
             ]
         ]
     )
@@ -336,7 +336,7 @@ async def stream(c: Client, m: Message):
         await m.reply("» give me a live-link/m3u8 url/youtube link to stream.")
     else:
         link = m.text.split(None, 1)[1]
-        suhu = await c.send_message(chat_id, "🎄 **processing stream...**")
+        suhu = await c.send_message(chat_id, "⚡")
 
         regex = r"^(https?\:\/\/)?(www\.youtube\.com|youtu\.?be)\/.+"
         match = re.match(regex, link)
@@ -355,12 +355,12 @@ async def stream(c: Client, m: Message):
                 requester = f"[{m.from_user.first_name}](tg://user?id={m.from_user.id})"
                 await m.reply_photo(
                     photo=f"{IMG_1}",
-                    caption=f"💡 **Musiqi sıraya əlavə olundu »** `{pos}`\n\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən...",
+                    caption=f"🎶 **Musiqi sıraya əlavə olundu »** `{pos}`\n\n💭 **Qrup ID:** `{chat_id}`\n🎧 {requester} tərəfindən...",
                     reply_markup=keyboard,
                 )
             else:
                 try:
-                    await suhu.edit("🎄 **Asistan səsli söhbətə qoşulur...**")
+                    await suhu.edit("⚡")
                     await call_py.join_group_call(
                         chat_id,
                         AudioPiped(
@@ -375,7 +375,7 @@ async def stream(c: Client, m: Message):
                     )
                     await m.reply_photo(
                         photo=f"{IMG_1}",
-                        caption=f"💡 **Musiqi başladı.**\n\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `dinlənilir`\n🎧 {requester} tərəfindən...",
+                        caption=f"🎶 **Musiqi başladı.**\n\n💭 **Qrup ID:** `{chat_id}`\n💡 **Status:** `dinlənilir`\n🎧 {requester} tərəfindən...",
                         reply_markup=keyboard,
                     )
                 except Exception as ep:
