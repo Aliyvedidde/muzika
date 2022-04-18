@@ -53,7 +53,7 @@ async def _human_time_duration(seconds):
 )
 async def start_(client: Client, message: Message):
     await message.reply_text(
-        f""" Salam {message.from_user.mention()}! **Hoks 🌬️ sizi salamlayır.**\n
+        f""" ʜᴇʏʏ {message.from_user.mention()}! **AURO 🌬️ ꜱɪᴢɪ ꜱᴀʟᴀᴍʟᴀʏɪʀ.**\n
 **Botu qrupa əlavə edərək həm musiqi dinləyə həmdə video və ya kino izləyə bilərsiz**
 
 
@@ -63,22 +63,22 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "➕ Məni qrupa əlavə et",
+                        "💈 ᴍᴇɴɪ ᴏᴢ ɢᴜʀᴜᴘɴᴜᴢᴀ ᴇʟᴀᴠᴇ ᴇᴅɪɴ",
                         url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "👨🏻‍💻 Creator",
-                        url=f"https://t.me/A_I_i_y_e_v_d_i",
+                        "👨🏻‍💻 ᴄʀᴇᴀᴛᴏʀ",
+                        url=f"https://t.me/Ortalixdan_Mehdi",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "🌬️ Söhbət Gurup", url=f"https://t.me/{GROUP_SUPPORT}"
+                        "💭 ꜱᴏʜʙᴇᴛ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}"
                     ),
                     InlineKeyboardButton(
-                        "🎧 Music kanal", url=f"https://t.me/{UPDATES_CHANNEL}"
+                        "🎧 ᴍᴜꜱɪᴄ ᴋᴀɴᴀʟ", url=f"https://t.me/{UPDATES_CHANNEL}"
                     ),
                 ],
 
@@ -100,11 +100,11 @@ async def new_chat(c: Client, m: Message):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton("🎧 Music Kanal", url=f"https://t.me/{UPDATES_CHANNEL}"),
-                            InlineKeyboardButton("🌬️ Söhbət Gurup", url=f"https://t.me/{GROUP_SUPPORT}")
+                            InlineKeyboardButton("🎧 ᴍᴜꜱɪᴄ ᴋᴀɴᴀʟ", url=f"https://t.me/{UPDATES_CHANNEL}"),
+                            InlineKeyboardButton("💭 ꜱᴏʜʙᴇᴛ ɢʀᴏᴜᴘ", url=f"https://t.me/{GROUP_SUPPORT}")
                         ],
                         [
-                            InlineKeyboardButton("👤 Asistan", url=f"https://t.me/{ass_uname}")
+                            InlineKeyboardButton("👤 ᴀꜱɪꜱᴛᴀɴ", url=f"https://t.me/{ass_uname}")
                         ]
                     ]
                 )
